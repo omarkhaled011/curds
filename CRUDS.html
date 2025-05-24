@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)file:///E:/omar/my%20project/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="./CRUDS_files/master.css">
+    
+
+  </head>
+  <body>
+  <div class="cruds">
+    <div class="head">
+      <h1>curds</h1>
+      <p>product management system</p>
+    </div>
+    <button id="dark">Dark Mode</button>
+    <button id="light" style="display: none;">light Mode</button>
+    <div class="inputs">
+      <input type="text" placeholder="title" id="title">
+      <div class="price">
+          <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+          <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+          <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+          <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+          <small id="total" style="background-color: rgb(209, 10, 10);"></small>
+        
+      </div>
+      <input type="text" placeholder="category" id="category">
+      <input type="text" placeholder="count" id="count" style="display: block;">
+      <button id="submit">Create</button>
+
+
+
+
+    </div>
+    <div class="outputs">
+      <div class="searchblock">
+         <input onkeyup="searchProduct(this.value)" id="search" placeholder="search" type="text"> 
+         <div id="btnSearch">
+            <button onclick="searchdata(this.id)" id="search By Title">Search By Title</button>
+            <button onclick="searchdata(this.id)" id="search By Category">Search By Category</button>
+         </div>
+      </div>
+
+
+      <div id="del"><button onclick="deleteAll()">DeleteAll (125) </button></div>
+       <table>
+         <tbody><tr>
+          <th>id</th>
+          <th>tital</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+         </tr>
+         </tbody><tbody id="tbody">
+         <tr>
+            <td>1</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(0)">update</button></td>
+            <td><button onclick="deletep(0)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>2</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(1)">update</button></td>
+            <td><button onclick="deletep(1)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>3</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(2)">update</button></td>
+            <td><button onclick="deletep(2)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>4</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(3)">update</button></td>
+            <td><button onclick="deletep(3)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>5</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(4)">update</button></td>
+            <td><button onclick="deletep(4)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>6</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(5)">update</button></td>
+            <td><button onclick="deletep(5)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>7</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(6)">update</button></td>
+            <td><button onclick="deletep(6)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>8</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(7)">update</button></td>
+            <td><button onclick="deletep(7)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>9</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(8)">update</button></td>
+            <td><button onclick="deletep(8)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>10</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(9)">update</button></td>
+            <td><button onclick="deletep(9)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>11</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(10)">update</button></td>
+            <td><button onclick="deletep(10)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>12</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(11)">update</button></td>
+            <td><button onclick="deletep(11)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>13</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(12)">update</button></td>
+            <td><button onclick="deletep(12)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>14</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(13)">update</button></td>
+            <td><button onclick="deletep(13)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>15</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(14)">update</button></td>
+            <td><button onclick="deletep(14)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>16</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(15)">update</button></td>
+            <td><button onclick="deletep(15)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>17</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(16)">update</button></td>
+            <td><button onclick="deletep(16)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>18</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(17)">update</button></td>
+            <td><button onclick="deletep(17)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>19</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(18)">update</button></td>
+            <td><button onclick="deletep(18)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>20</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(19)">update</button></td>
+            <td><button onclick="deletep(19)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>21</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(20)">update</button></td>
+            <td><button onclick="deletep(20)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>22</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(21)">update</button></td>
+            <td><button onclick="deletep(21)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>23</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(22)">update</button></td>
+            <td><button onclick="deletep(22)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>24</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(23)">update</button></td>
+            <td><button onclick="deletep(23)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>25</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(24)">update</button></td>
+            <td><button onclick="deletep(24)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>26</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(25)">update</button></td>
+            <td><button onclick="deletep(25)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>27</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(26)">update</button></td>
+            <td><button onclick="deletep(26)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>28</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(27)">update</button></td>
+            <td><button onclick="deletep(27)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>29</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(28)">update</button></td>
+            <td><button onclick="deletep(28)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>30</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(29)">update</button></td>
+            <td><button onclick="deletep(29)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>31</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(30)">update</button></td>
+            <td><button onclick="deletep(30)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>32</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(31)">update</button></td>
+            <td><button onclick="deletep(31)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>33</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(32)">update</button></td>
+            <td><button onclick="deletep(32)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>34</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(33)">update</button></td>
+            <td><button onclick="deletep(33)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>35</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(34)">update</button></td>
+            <td><button onclick="deletep(34)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>36</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(35)">update</button></td>
+            <td><button onclick="deletep(35)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>37</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(36)">update</button></td>
+            <td><button onclick="deletep(36)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>38</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(37)">update</button></td>
+            <td><button onclick="deletep(37)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>39</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(38)">update</button></td>
+            <td><button onclick="deletep(38)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>40</td>
+            <td>oppo</td>
+            <td>7000</td>
+            <td>700</td>
+            <td>200</td>
+            <td>100</td>
+            <td>7800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(39)">update</button></td>
+            <td><button onclick="deletep(39)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>41</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(40)">update</button></td>
+            <td><button onclick="deletep(40)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>42</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(41)">update</button></td>
+            <td><button onclick="deletep(41)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>43</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(42)">update</button></td>
+            <td><button onclick="deletep(42)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>44</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(43)">update</button></td>
+            <td><button onclick="deletep(43)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>45</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(44)">update</button></td>
+            <td><button onclick="deletep(44)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>46</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(45)">update</button></td>
+            <td><button onclick="deletep(45)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>47</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(46)">update</button></td>
+            <td><button onclick="deletep(46)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>48</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(47)">update</button></td>
+            <td><button onclick="deletep(47)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>49</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(48)">update</button></td>
+            <td><button onclick="deletep(48)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>50</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(49)">update</button></td>
+            <td><button onclick="deletep(49)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>51</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(50)">update</button></td>
+            <td><button onclick="deletep(50)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>52</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(51)">update</button></td>
+            <td><button onclick="deletep(51)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>53</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(52)">update</button></td>
+            <td><button onclick="deletep(52)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>54</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(53)">update</button></td>
+            <td><button onclick="deletep(53)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>55</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(54)">update</button></td>
+            <td><button onclick="deletep(54)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>56</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(55)">update</button></td>
+            <td><button onclick="deletep(55)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>57</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(56)">update</button></td>
+            <td><button onclick="deletep(56)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>58</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(57)">update</button></td>
+            <td><button onclick="deletep(57)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>59</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(58)">update</button></td>
+            <td><button onclick="deletep(58)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>60</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(59)">update</button></td>
+            <td><button onclick="deletep(59)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>61</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(60)">update</button></td>
+            <td><button onclick="deletep(60)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>62</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(61)">update</button></td>
+            <td><button onclick="deletep(61)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>63</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(62)">update</button></td>
+            <td><button onclick="deletep(62)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>64</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(63)">update</button></td>
+            <td><button onclick="deletep(63)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>65</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(64)">update</button></td>
+            <td><button onclick="deletep(64)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>66</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(65)">update</button></td>
+            <td><button onclick="deletep(65)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>67</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(66)">update</button></td>
+            <td><button onclick="deletep(66)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>68</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(67)">update</button></td>
+            <td><button onclick="deletep(67)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>69</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(68)">update</button></td>
+            <td><button onclick="deletep(68)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>70</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(69)">update</button></td>
+            <td><button onclick="deletep(69)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>71</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(70)">update</button></td>
+            <td><button onclick="deletep(70)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>72</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(71)">update</button></td>
+            <td><button onclick="deletep(71)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>73</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(72)">update</button></td>
+            <td><button onclick="deletep(72)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>74</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(73)">update</button></td>
+            <td><button onclick="deletep(73)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>75</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(74)">update</button></td>
+            <td><button onclick="deletep(74)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>76</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(75)">update</button></td>
+            <td><button onclick="deletep(75)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>77</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(76)">update</button></td>
+            <td><button onclick="deletep(76)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>78</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(77)">update</button></td>
+            <td><button onclick="deletep(77)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>79</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(78)">update</button></td>
+            <td><button onclick="deletep(78)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>80</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(79)">update</button></td>
+            <td><button onclick="deletep(79)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>81</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(80)">update</button></td>
+            <td><button onclick="deletep(80)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>82</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(81)">update</button></td>
+            <td><button onclick="deletep(81)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>83</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(82)">update</button></td>
+            <td><button onclick="deletep(82)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>84</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(83)">update</button></td>
+            <td><button onclick="deletep(83)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>85</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(84)">update</button></td>
+            <td><button onclick="deletep(84)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>86</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(85)">update</button></td>
+            <td><button onclick="deletep(85)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>87</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(86)">update</button></td>
+            <td><button onclick="deletep(86)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>88</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(87)">update</button></td>
+            <td><button onclick="deletep(87)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>89</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(88)">update</button></td>
+            <td><button onclick="deletep(88)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>90</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(89)">update</button></td>
+            <td><button onclick="deletep(89)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>91</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(90)">update</button></td>
+            <td><button onclick="deletep(90)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>92</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(91)">update</button></td>
+            <td><button onclick="deletep(91)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>93</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(92)">update</button></td>
+            <td><button onclick="deletep(92)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>94</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(93)">update</button></td>
+            <td><button onclick="deletep(93)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>95</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(94)">update</button></td>
+            <td><button onclick="deletep(94)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>96</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(95)">update</button></td>
+            <td><button onclick="deletep(95)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>97</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(96)">update</button></td>
+            <td><button onclick="deletep(96)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>98</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(97)">update</button></td>
+            <td><button onclick="deletep(97)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>99</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(98)">update</button></td>
+            <td><button onclick="deletep(98)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>100</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(99)">update</button></td>
+            <td><button onclick="deletep(99)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>101</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(100)">update</button></td>
+            <td><button onclick="deletep(100)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>102</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(101)">update</button></td>
+            <td><button onclick="deletep(101)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>103</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(102)">update</button></td>
+            <td><button onclick="deletep(102)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>104</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(103)">update</button></td>
+            <td><button onclick="deletep(103)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>105</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(104)">update</button></td>
+            <td><button onclick="deletep(104)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>106</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(105)">update</button></td>
+            <td><button onclick="deletep(105)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>107</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(106)">update</button></td>
+            <td><button onclick="deletep(106)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>108</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(107)">update</button></td>
+            <td><button onclick="deletep(107)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>109</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(108)">update</button></td>
+            <td><button onclick="deletep(108)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>110</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(109)">update</button></td>
+            <td><button onclick="deletep(109)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>111</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(110)">update</button></td>
+            <td><button onclick="deletep(110)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>112</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(111)">update</button></td>
+            <td><button onclick="deletep(111)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>113</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(112)">update</button></td>
+            <td><button onclick="deletep(112)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>114</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(113)">update</button></td>
+            <td><button onclick="deletep(113)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>115</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(114)">update</button></td>
+            <td><button onclick="deletep(114)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>116</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(115)">update</button></td>
+            <td><button onclick="deletep(115)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>117</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(116)">update</button></td>
+            <td><button onclick="deletep(116)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>118</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(117)">update</button></td>
+            <td><button onclick="deletep(117)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>119</td>
+            <td>lg</td>
+            <td>7000</td>
+            <td>500</td>
+            <td>200</td>
+            <td>200</td>
+            <td>7500</td>
+            <td>tv</td>
+            <td><button id="update" onclick="update(118)">update</button></td>
+            <td><button onclick="deletep(118)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>120</td>
+            <td>realme</td>
+            <td>6000</td>
+            <td>300</td>
+            <td>200</td>
+            <td>400</td>
+            <td>6100</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(119)">update</button></td>
+            <td><button onclick="deletep(119)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>121</td>
+            <td>samsug</td>
+            <td>4000</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+            <td>4800</td>
+            <td>ph</td>
+            <td><button id="update" onclick="update(120)">update</button></td>
+            <td><button onclick="deletep(120)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>122</td>
+            <td>بتبتتببت</td>
+            <td>44444</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>44444</td>
+            <td>444</td>
+            <td><button id="update" onclick="update(121)">update</button></td>
+            <td><button onclick="deletep(121)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>123</td>
+            <td>بتبتتببت</td>
+            <td>44444</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>44444</td>
+            <td>444</td>
+            <td><button id="update" onclick="update(122)">update</button></td>
+            <td><button onclick="deletep(122)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>124</td>
+            <td>بتبتتببت</td>
+            <td>44444</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>44444</td>
+            <td>444</td>
+            <td><button id="update" onclick="update(123)">update</button></td>
+            <td><button onclick="deletep(123)" id="delete">delete</button></td>
+            
+          </tr>
+     
+         <tr>
+            <td>125</td>
+            <td>بتبتتببت</td>
+            <td>44444</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>44444</td>
+            <td>444</td>
+            <td><button id="update" onclick="update(124)">update</button></td>
+            <td><button onclick="deletep(124)" id="delete">delete</button></td>
+            
+          </tr>
+     </tbody>
+       </table>
+
+    </div>
+  </div>
+
+ <script src="./CRUDS_files/main.js"></script>
+  
+</body></html>
